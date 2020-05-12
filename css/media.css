@@ -1,0 +1,102 @@
+@media screen and (max-width: 425px) {
+    :root {
+        /* Primary */
+
+        --softBlue: hsl(231, 69%, 60%);
+        --softRed: hsl(0, 94%, 66%);
+
+        /* Neutral */
+
+        --grayishBlue: hsl(229, 8%, 60%);
+        --veryDarkBlue: hsl(229, 31%, 21%);
+    }
+
+    * {
+        font-size: 12px;
+    }
+
+    .header__logo,
+    .header__mobile__logo,
+    .footer__logo {
+        width: 153px;
+        height: 25.85px;
+    }
+
+    .header__nav__facebook,
+    .header__nav__twitter {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header__mobile__close,
+    .header__hamburger {
+        width: 17px;
+        height: 15px;
+    }
+
+    /* Mobile navigation */
+
+    .header__nav {
+        position: fixed;
+        background-color: rgba(37, 43, 70, 0.95);
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 3em 10%;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+}
+
+    .header__nav__mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    .header__nav ul {
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    .header__nav ul li {
+        padding: 1em 0;
+        border-top: 1px solid var(--grayishBlue);
+    }
+
+    .header__nav #contact {
+        border-bottom: 1px solid var(--grayishBlue);
+        margin-bottom: 2em;
+    }
+
+    .header__nav ul li a,
+    .header__nav__login {
+        color: #FFF;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    .header__nav__login {
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid #FFF;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+    }
+
+    .header__nav__social {
+        position: absolute;
+        bottom: 5%;
+        width: 80%;
+        text-align: center;
+    }
+
+    .header__nav__facebook {
+        margin-right: 15%;
+    }
+}
