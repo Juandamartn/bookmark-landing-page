@@ -6,6 +6,7 @@
 
     /* Neutral */
 
+    --veryLightGray: hsl(0, 0%, 98%);
     --grayishBlue: hsl(229, 8%, 60%);
     --veryDarkBlue: hsl(229, 31%, 21%);
 }
@@ -17,7 +18,6 @@
     box-sizing: border-box;
     font-family: Rubik, sans-serif;
     font-weight: 400;
-    line-height: 1.8em;
 }
 
 /* Deleting default outline when focusing an input */
@@ -34,21 +34,23 @@ button:focus {
 }
 
 button {
-    padding: 0.8em 1em;
+    padding: 1.1em 1.1em;
     border: none;
     background-color: var(--softBlue);
     color: #FFF;
+    font-weight: 500;
     border-radius: 0.4em;
     -webkit-border-radius: 0.4em;
     -moz-border-radius: 0.4em;
     -ms-border-radius: 0.4em;
     -o-border-radius: 0.4em;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 0.3em 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0.3em 0.5em;
 }
 
 p {
     color: var(--grayishBlue);
     text-align: center;
+    line-height: 1.8em;
 }
 
 h1,
@@ -57,6 +59,7 @@ h3 {
     color: var(--veryDarkBlue);
     font-weight: 500;
     text-align: center;
+    line-height: 1.3em;
 }
 
 a {
@@ -67,7 +70,9 @@ li {
     list-style: none;
 }
 
-header {
+header,
+.main__hero,
+.main__features {
     padding: 0 10%;
 }
 
@@ -99,4 +104,58 @@ header {
 
 .main__hero {
     overflow: hidden;
+}
+
+.hero__background__image {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.main__hero__info,
+.features__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__hero__info h1,
+.features__info h1 {
+    margin-bottom: 0.5em;
+}
+
+.main__hero__info p,
+.features__info p {
+    margin-bottom: 1.5em;
+}
+
+.info__button__chrome {
+    margin-right: 0.7em;
+}
+
+.info__button__firefox {
+    background-color: var(--veryLightGray);
+    color: var(--veryDarkBlue);
+}
+
+/* Features section */
+
+.main__features {
+    margin: 3em 0;
+}
+
+.features__info h1 {
+    font-size: 1.8em;
+}
+
+.features__menu {
+    display: flex;
+}
+
+.features__menu h2 {
+    padding: 1em;
+}
+
+.features__menu .featSelected {
+    color: var(--veryDarkBlue);
 }

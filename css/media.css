@@ -8,6 +8,7 @@
         /* Neutral */
 
         --grayishBlue: hsl(229, 8%, 60%);
+        --veryLightGray: hsl(0, 0%, 98%);
         --veryDarkBlue: hsl(229, 31%, 21%);
     }
 
@@ -49,7 +50,8 @@
         -moz-transition: all 0.3s;
         -ms-transition: all 0.3s;
         -o-transition: all 0.3s;
-}
+        z-index: 3;
+    }
 
     .header__nav__mobile {
         display: flex;
@@ -98,5 +100,79 @@
 
     .header__nav__facebook {
         margin-right: 15%;
+    }
+
+    /* Hero section */
+
+    .main__hero {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+
+    .main__hero__background {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .main__hero__info {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .main__hero__info h1 {
+        font-size: 2.3em;
+    }
+
+    .main__hero__info p {
+        width: 240px;
+    }
+
+    /* Features section */
+
+    .features__info p {
+        width: 250px;
+    }
+
+    .features__menu {
+        flex-direction: column;
+    }
+
+    #featItem01 {
+        border-top: 1px solid #e2e2e2;
+    }
+
+    .features__menu h2 {
+        color: var(--grayishBlue);
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .featSelected::after {
+        content: "";
+        width: 26%;
+        height: 15px;
+        padding: 4px;
+        position: absolute;
+        left: 36vw;
+        border-bottom: 4px solid var(--softRed);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .hero__background__circle {
+        position: absolute;
+        right: 0;
+        top: 20%;
+        height: 12em;
+        width: 20em;
+        background-color: var(--softBlue);
+        z-index: 1;
+        border-radius: 35% 0 0 35%;
+        -webkit-border-radius: 35% 0 0 35%;
+        -moz-border-radius: 35% 0 0 35%;
+        -ms-border-radius: 35% 0 0 35%;
+        -o-border-radius: 35% 0 0 35%;
     }
 }
