@@ -15,7 +15,7 @@ var featBackground = document.getElementById('description__background__image'),
     featDescription = document.getElementById('features__description'),
     featSelected = document.querySelector('.featSelected');
 
-if (window.screen.width <= 425) {
+if (window.screen.width <= 768) {
     headerMenu.classList.toggle('hidden');
     headerHamburger.classList.toggle('hidden');
     featuresButton.classList.toggle('hidden');
