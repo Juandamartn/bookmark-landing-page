@@ -79,22 +79,27 @@
       </div>
 
       <div class="features__menu">
-        <h2 id="featItem01" class="featSelected">Simple Bookmarking</h2>
+        <h2 id="featItem01" class="featSelected" onclick="featureTab(this)">Simple Bookmarking</h2>
 
-        <h2 id="featItem02">Speedy Searching</h2>
+        <h2 id="featItem02" onclick="featureTab(this)">Speedy Searching</h2>
 
-        <h2 id="featItem03">Easy Sharing</h2>
+        <h2 id="featItem03" onclick="featureTab(this)">Easy Sharing</h2>
       </div>
 
       <div class="features__description">
         <div class="features__description__background" id="features__description__background">
+          <img src="./images/illustration-features-tab-1.svg" alt="" id="description__background__image">
+
           <div class="description__background__circle"></div>
         </div>
 
         <div class="features__description__info">
-          <h3 id="features__title"></h3>
+          <h3 id="features__title">Bookmark in one click</h3>
 
-          <p id="features__description"></p>
+          <p id="features__description">
+            Organize your bookmarks however you like.Our simple drag - and - drop interface gives you complete control
+            over how you manage your favourite sites.
+          </p>
 
           <button class="features__more-info" id="features__more-info">More Info</button>
         </div>
@@ -119,6 +124,8 @@
 
           <p>Minimum version 62</p>
 
+          <img src="./images/bg-dots.svg" alt="">
+
           <button class="download__button">Add & Install Extension</button>
         </div>
 
@@ -129,6 +136,8 @@
 
           <p>Minimum version 55</p>
 
+          <img src="./images/bg-dots.svg" alt="">
+
           <button class="download__button">Add & Install Extension</button>
         </div>
 
@@ -138,6 +147,8 @@
           <h2>Add to Opera</h2>
 
           <p>Minimum version 46</p>
+
+          <img src="./images/bg-dots.svg" alt="">
 
           <button class="download__button">Add & Install Extension</button>
         </div>
@@ -156,9 +167,9 @@
 
       <div class="main__questions__container">
         <div class="questions__container__item">
-          <h2 id="qItem01">
+          <h2 id="1" onclick="showAnswer(this)">
             What is Bookmark?
-            <img src="./images/icon-arrow.svg" alt="">
+            <img src="./images/icon-arrow.svg" alt="" id="arrow01">
           </h2>
 
           <p id="dItem01" class="hidden">
@@ -168,9 +179,9 @@
         </div>
 
         <div class="questions__container__item">
-          <h2 id="qItem02">
+          <h2 id="2" onclick="showAnswer(this)">
             How can I request a new browser?
-            <img src="./images/icon-arrow.svg" alt="">
+            <img src="./images/icon-arrow.svg" alt="" id="arrow02">
           </h2>
 
           <p id="dItem02" class="hidden">
@@ -182,9 +193,9 @@
         </div>
 
         <div class="questions__container__item">
-          <h2 id="qItem03">
+          <h2 id="3" onclick="showAnswer(this)">
             Is there a mobile app?
-            <img src="./images/icon-arrow.svg" alt="">
+            <img src="./images/icon-arrow.svg" alt="" id="arrow03">
           </h2>
 
           <p id="dItem03" class="hidden">
@@ -195,9 +206,9 @@
         </div>
 
         <div class="questions__container__item">
-          <h2 id="qItem04">
+          <h2 id="4" onclick="showAnswer(this)">
             What about other Chromium browsers?
-            <img src="./images/icon-arrow.svg" alt="">
+            <img src="./images/icon-arrow.svg" alt="" id="arrow04">
           </h2>
 
           <p id="dItem04" class="hidden">
@@ -218,7 +229,9 @@
       <h1>Stay up-to-date with what we’re doing</h1>
 
       <form action="/" method="GET" class="main__contact__form">
-        <input type="email" name="contact__form" id="contact__form">
+        <input type="email" name="contact__form" id="contact__form" placeholder="Enter your email address" required>
+
+        <span>Whoops, make sure it's an email</span>
 
         <button type="submit">Contact Us</button>
       </form>
