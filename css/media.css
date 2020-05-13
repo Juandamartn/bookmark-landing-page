@@ -1,4 +1,69 @@
 @media screen and (max-width: 768px) {
+    /* Mobile navigation */
+
+    .header__nav {
+        position: fixed;
+        background-color: rgba(37, 43, 70, 0.95);
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 3em 10%;
+        z-index: 3;
+    }
+
+    .header__nav__mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    .header__nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    .header__nav ul li {
+        width: 97%;
+        padding: 1em 0;
+        margin: 0;
+        border-top: 1px solid var(--grayishBlue);
+    }
+
+    .header__nav #contact {
+        border-bottom: 1px solid var(--grayishBlue);
+        margin-bottom: 2em;
+    }
+
+    .header__nav ul li a,
+    .header__nav__login {
+        color: #FFF;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    .header__nav__login {
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid #FFF;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+    }
+
+    .header__nav__social {
+        position: absolute;
+        bottom: 5%;
+        width: 80%;
+        text-align: center;
+    }
+
+    .header__nav__facebook {
+        margin-right: 15%;
+    }
+
     /* Hero section */
 
     .main__hero {
@@ -10,6 +75,13 @@
     .main__hero__background {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+    }
+
+    .main__hero__info,
+    .features__info,
+    .features__description__info,
+    .main__download__info {
+        align-items: center;
     }
 
     .main__hero__info {
@@ -26,7 +98,7 @@
     .hero__background__circle {
         position: absolute;
         right: 0;
-        top: 33%;
+        top: 43%;
         height: 48%;
         width: 70%;
         background-color: var(--softBlue);
@@ -41,6 +113,7 @@
     /* Features section */
 
     .features__menu {
+        width: 100%;
         flex-direction: column;
     }
 
@@ -49,7 +122,12 @@
     }
 
     .features__menu h2 {
+        width: 100%;
         color: var(--grayishBlue);
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .features__menu .featSelected {
         border-bottom: 1px solid #e2e2e2;
     }
 
@@ -115,6 +193,69 @@
     .main__contact__form {
         flex-direction: column;
     }
+
+    .main__download {
+        margin-top: 0;
+    }
+
+    .main__download__info {
+        padding-top: 0;
+    }
+
+    .main__download__info {
+        width: 100%;
+    }
+
+    .main__download__container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+
+    .download__source {
+        width: 100%;
+        height: auto;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .main__questions__info {
+        width: 100%;
+    }
+
+    .main__questions__container {
+        width: 80%;
+    }
+
+    .main__contact__form input {
+        width: 100%;
+    }
+
+    .main__contact__form input:invalid + span {
+        width: 100%;
+    }
+
+    .footer__container,
+    .footer__nav ul,
+    .footer__logo-nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__logo,
+    .footer__nav ul li {
+        margin: 0;
+    }
+
+    .footer__logo,
+    .footer__nav ul li,
+    .footer__logo-nav {
+        margin-bottom: 1.5em;
+    }
+
+    ..footer__nav ul li a {
+        letter-spacing: 0.3em;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -154,67 +295,7 @@
         height: 15px;
     }
 
-    /* Mobile navigation */
-
-    .header__nav {
-        position: fixed;
-        background-color: rgba(37, 43, 70, 0.95);
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        padding: 3em 10%;
-        z-index: 3;
-    }
-
-    .header__nav__mobile {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2em;
-    }
-
-    .header__nav ul {
-        text-align: center;
-        margin-top: 3em;
-    }
-
-    .header__nav ul li {
-        padding: 1em 0;
-        border-top: 1px solid var(--grayishBlue);
-    }
-
-    .header__nav #contact {
-        border-bottom: 1px solid var(--grayishBlue);
-        margin-bottom: 2em;
-    }
-
-    .header__nav ul li a,
-    .header__nav__login {
-        color: #FFF;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-    }
-
-    .header__nav__login {
-        width: 100%;
-        background-color: transparent;
-        border: 2px solid #FFF;
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
-    }
-
-    .header__nav__social {
-        position: absolute;
-        bottom: 5%;
-        width: 80%;
-        text-align: center;
-    }
-
-    .header__nav__facebook {
-        margin-right: 15%;
-    }
+    /* Hero section */
 
     .main__hero__info p {
         width: 240px;
@@ -267,7 +348,7 @@
     .hero__background__circle {
         position: absolute;
         right: 0;
-        top: 20%;
+        top: 28%;
         height: 28%;
         width: 20em;
         background-color: var(--softBlue);
@@ -300,10 +381,14 @@
 }
 
 @media screen and (max-width: 375px) {
+    .questions__container__item h2 {
+        text-align: left;
+    }
+
     .hero__background__circle {
         position: absolute;
         right: 0;
-        top: 21%;
+        top: 27%;
         height: 25%;
         width: 20em;
         background-color: var(--softBlue);
@@ -320,7 +405,7 @@
     .hero__background__circle {
         position: absolute;
         right: 0;
-        top: 20%;
+        top: 25%;
         height: 12em;
         width: 20em;
         background-color: var(--softBlue);
